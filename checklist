@@ -1,0 +1,32 @@
+checklist
+
+• memset OK
+• bzero Ok
+• memcpy OK
+• memccpy OK
+• memmove OK
+• memchr OK
+• memcmp OK
+• strlen OK
+• strdup OK
+• strcpy OK
+• strncpy OK
+• strcat OK
+• strncat OK
+• strlcat OK
+• strchr
+• strrchr
+• strstr
+• strnstr
+• strcmp
+• strncmp
+• atoi
+• isalpha
+• isdigit
+• isalnum
+• isascii
+• isprint
+• toupper
+• tolower
+• ft_memalloc
+
