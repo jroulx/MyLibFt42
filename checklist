@@ -14,7 +14,7 @@ checklist
 • strcat OK
 • strncat OK
 • strlcat OK
-• strchr
+• strchr OK
 • strrchr
 • strstr
 • strnstr
