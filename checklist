@@ -24,9 +24,9 @@ checklist
 • isalpha OK
 • isdigit OK
 • isalnum OK
-• isascii
-• isprint
-• toupper
-• tolower
+• isascii OK
+• isprint OK
+• toupper OK
+• tolower OK
 • ft_memalloc
 

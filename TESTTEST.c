@@ -601,5 +601,79 @@ int		main (int argc, char **argv)
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
 			return (0);
 	}
+
+	if ((ft_strcmp(argv[1], "ft_isascii") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = 7;
+		test2 = 129;
+		ft_putstr("Test de ft_isascii\n*****************\n");
+		if (ft_isascii(test1))
+			ft_putstr("Test 1 -> OK\n");
+		else ft_putstr("Test 1 -> KO\n");
+		if (!(ft_isascii(test2)))
+			ft_putstr("Test 2 -> OK");
+		else ft_putstr("Test 2 -> KO");
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_isprint") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = 32;
+		test2 = 127;
+		ft_putstr("Test de ft_isprint\n*****************\n");
+		if (ft_isprint(test1))
+			ft_putstr("Test 1 -> OK\n");
+		else ft_putstr("Test 1 -> KO\n");
+		if (!(ft_isprint(test2)))
+			ft_putstr("Test 2 -> OK");
+		else ft_putstr("Test 2 -> KO");
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_toupper") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = 'a';
+		test2 = '2';
+		ft_putstr("Test de ft_toupper\n*****************\n");
+		ft_putstr("a --> ");
+		ft_putchar(ft_toupper(test1));
+		ft_putchar('\n');
+		ft_putstr("2 --> ");
+		ft_putchar(ft_toupper(test2));
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_tolower") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = 'R';
+		test2 = '2';
+		ft_putstr("Test de ft_tolower\n*****************\n");
+		ft_putstr("R --> ");
+		ft_putchar(ft_tolower(test1));
+		ft_putchar('\n');
+		ft_putstr("2 --> ");
+		ft_putchar(ft_tolower(test2));
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
 	return (0);
 }
