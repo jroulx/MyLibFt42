@@ -6,9 +6,9 @@
 
 char	*ft_strnstr(const char *meule_de_foin, const char *aiguille, size_t len)
 {
-	int k;
-	int y;
-	int found;
+	size_t k;
+	size_t y;
+	size_t found;
 	char *location;
 
 	k = 0;

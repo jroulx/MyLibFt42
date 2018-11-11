@@ -17,13 +17,13 @@ checklist
 • strchr OK
 • strrchr OK
 • strstr OK
-• strnstr
-• strcmp
-• strncmp
-• atoi
-• isalpha
-• isdigit
-• isalnum
+• strnstr OK
+• strcmp OK
+• strncmp OK
+• atoi OK
+• isalpha OK
+• isdigit OK
+• isalnum OK
 • isascii
 • isprint
 • toupper

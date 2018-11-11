@@ -440,5 +440,166 @@ int		main (int argc, char **argv)
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
 			return (0);
 	}
+
+	if ((ft_strcmp(argv[1], "ft_strnstr") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char src1[100] = "Wargrooveincomingsoon";
+		char src2[100] = "incoming";
+		char *dest1;
+		char *dest2;
+
+		ft_putstr("Test de ft_strnstr\n*****************\n");
+		ft_putstr(src1);
+		ft_putchar('\n');
+		ft_putstr(src2);
+		ft_putchar('\n');
+		dest1 = ft_strnstr(src1, src2, 15);
+		dest2 = ft_strnstr(src1, src2, 13);
+		ft_putstr(dest1);
+		ft_putchar('\n');
+		ft_putstr(dest2);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strncmp") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char *test1;
+		char *test2;
+		char *test3;
+
+		ft_putstr("Test de ft_strncmp\n*****************\n");
+		test1 = "hello world!";
+		test2 = "wargroove";
+		test3 = "hello warld!";
+		if (ft_strncmp(test1, test2, 7) < 0)
+			ft_putstr("TEST1 -> OK\n");
+		else ft_putstr("TEST1 -> KO\n");
+		if (ft_strncmp(test2, test1, 6) > 0)
+			ft_putstr("TEST2 -> OK\n");
+		else ft_putstr("TEST2 -> KO\n");
+		if (ft_strncmp(test1, test3, 5) == 0)
+			ft_putstr("TEST3 -> OK\n");
+		else ft_putstr("TEST3 -> KO\n");
+		ft_putstr("Congrats !\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_atoi") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char *test1;
+		char *test2;
+		char *test3;
+
+		test1 = "-15k7";
+		test2 = "+1875";
+		test3 = "-546k5-";
+		ft_putstr("Test de ft_atoi\n*****************\n");
+		ft_putstr(test1);
+		ft_putchar('\n');
+		ft_putstr(test2);
+		ft_putchar('\n');
+		ft_putstr(test3);
+		ft_putchar('\n');
+		ft_putnbr_fd(atoi(test1), 1);
+		ft_putchar('\n');
+		ft_putnbr_fd(atoi(test2), 1);
+		ft_putchar('\n');
+		ft_putnbr_fd(atoi(test3), 1);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_putnbr_fd") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = 18;
+		test2 = -256;
+		ft_putstr("Test de ft_putnbr_fd\n*****************\n");
+		ft_putnbr_fd(test1, 1);
+		ft_putchar('\n');
+		ft_putnbr_fd(test2, 1);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_putnbr") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = 318;
+		test2 = -7256;
+		ft_putstr("Test de ft_putnbr\n*****************\n");
+		ft_putnbr(test1);
+		ft_putchar('\n');
+		ft_putnbr(test2);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_isalpha") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = 'C';
+		test2 = '3';
+		ft_putstr("Test de ft_isalpha\n*****************\n");
+		if (ft_isalpha(test1))
+			ft_putstr("Test 1 -> OK\n");
+		else ft_putstr("Test 1 -> KO\n");
+		if (!(ft_isalpha(test2)))
+			ft_putstr("Test 2 -> OK");
+		else ft_putstr("Test 2 -> KO");
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_isdigit") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = '7';
+		test2 = 'k';
+		ft_putstr("Test de ft_isdigit\n*****************\n");
+		if (ft_isdigit(test1))
+			ft_putstr("Test 1 -> OK\n");
+		else ft_putstr("Test 1 -> KO\n");
+		if (!(ft_isdigit(test2)))
+			ft_putstr("Test 2 -> OK");
+		else ft_putstr("Test 2 -> KO");
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_isalnum") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		int	test1;
+		int test2;
+
+		test1 = '7';
+		test2 = 'k';
+		ft_putstr("Test de ft_isalnum\n*****************\n");
+		if (ft_isalnum(test1))
+			ft_putstr("Test 1 -> OK\n");
+		else ft_putstr("Test 1 -> KO\n");
+		if (ft_isalnum(test2))
+			ft_putstr("Test 2 -> OK");
+		else ft_putstr("Test 2 -> KO");
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
 	return (0);
 }
