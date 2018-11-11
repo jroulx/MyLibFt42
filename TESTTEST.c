@@ -54,15 +54,13 @@ int		main (int argc, char **argv)
 		/ et après le passage de memset, avec le charactère
 		/choisit -> charac */
 		char test1[100] = "Hello World";
-		char test2[100] = "WargrooveIncoming";
+		char test2[100] = "Hello World";
 
 		ft_putstr("Test de ft_memset\n*****************\n");
 		ft_putstr(test1);
 		ft_putchar('\n');
-		ft_putstr(test2);
-		ft_putchar('\n');
 		ft_memset(test1, 'h', 6);
-		ft_memset(test2, 'x', ft_strlen(test2));
+		memset(test2, 'h', 6);
 		ft_putstr(test1);
 		ft_putchar('\n');
 		ft_putstr(test2);
@@ -76,21 +74,17 @@ int		main (int argc, char **argv)
 	/* On défini 2 CdC src1, 2 qu'on copie dans 2 autres CdC
 	/ dest1, 2. On affiche les dest avant et après l'opération.*/
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
-		char dest1[100] = "AdvanceWars";
+		char src2[100] = "Hello World";
+		char dest1[100] = "WargrooveIncoming";
 		char dest2[100] = "WargrooveIncoming";
 
 		ft_putstr("Test de ft_memcpy\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		ft_putstr(dest1);
 		ft_putchar('\n');
-		ft_putstr(dest2);
-		ft_putchar('\n');
 		ft_memcpy(dest1, src1, 6);
-		ft_memcpy(dest2, src2, ft_strlen(src2));
+		memcpy(dest2, src2, 6);
 		ft_putstr(dest1);
 		ft_putchar('\n');
 		ft_putstr(dest2);
@@ -105,22 +99,18 @@ int		main (int argc, char **argv)
 	dest1, 2, 3. On affiche les dest avant et après l'opération.
 	Test à modifier -> Tester NULL ET Arrêt via Seek*/
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
-		char dest1[100] = "AdvanceWars";
+		char src2[100] = "Hello World";
+		char dest1[100] = "WargrooveIncoming";
 		char dest2[100] = "WargrooveIncoming";
 
 		ft_putstr("Test de ft_memccpy\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		ft_putstr(dest1);
-		ft_putchar('\n');
-		ft_putstr(dest2);
 		ft_putchar('\n');
 		ft_putstr(ft_memccpy(dest1, src1, 'l', 6));
 		ft_putchar('\n');
-		ft_putstr(ft_memccpy(dest2, src2, 'b',ft_strlen(src2)));
+		ft_putstr(memccpy(dest2, src2, 'l', 6));
 		ft_putchar('\n');
 		ft_putstr(dest1);
 		ft_putchar('\n');
@@ -135,21 +125,17 @@ int		main (int argc, char **argv)
 	/* On défini 2 CdC src1, 2 qu'on copie dans 2 autres CdC
 	/ dest1, 2. On affiche les dest avant et après l'opération.*/
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
-		char dest1[100] = "AdvanceWars";
+		char src2[100] = "Hello World";
+		char dest1[100] = "WargrooveIncoming";
 		char dest2[100] = "WargrooveIncoming";
 
 		ft_putstr("Test de ft_memmove\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		ft_putstr(dest1);
 		ft_putchar('\n');
-		ft_putstr(dest2);
-		ft_putchar('\n');
-		ft_memmove(dest1, src1, 6);
-		ft_memmove(dest2, src2, ft_strlen(src2));
+		ft_memmove(dest1, src1, ft_strlen(src2));
+		memmove(dest2, src2, ft_strlen(src2));
 		ft_putstr(dest1);
 		ft_putchar('\n');
 		ft_putstr(dest2);
@@ -162,18 +148,15 @@ int		main (int argc, char **argv)
 	if ((ft_strcmp(argv[1], "ft_memchr") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
 	{
 		char src1[100] = "Hello World!";
-		char src2[100] = "WargrooveIncoming";
 
 		ft_putstr("Test de ft_memchr\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		if (ft_memchr(src1, 'o', 7) != NULL)
 			ft_putstr(ft_memchr(src1, 'o', 7));
 		ft_putchar('\n');
-		if (ft_memchr(src2, 'v', 15) != NULL)
-			ft_putstr(ft_memchr(src2, 'v', 15));
+		if (ft_memchr(src1, 'o', 7) != NULL)
+			ft_putstr(memchr(src1, 'o', 7));
 		ft_putstr("\n\n");
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
 			return (0);
@@ -264,17 +247,15 @@ int		main (int argc, char **argv)
 	if ((ft_strcmp(argv[1], "ft_strdup") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
 	{
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
+		char src2[100] = "Hello World";
 		char *dest1;
 		char *dest2;
 
 		ft_putstr("Test de ft_strdup\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		dest1 = ft_strdup(src1);
-		dest2 = ft_strdup(src2);
+		dest2 = strdup(src2);
 		ft_putstr(dest1);
 		ft_putchar('\n');
 		ft_putstr(dest2);
@@ -288,7 +269,7 @@ int		main (int argc, char **argv)
 	if ((ft_strcmp(argv[1], "ft_strcpy") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
 	{
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
+		char src2[100] = "Hello World";
 		char dest1[100];
 		char dest2[100];
 
@@ -296,12 +277,10 @@ int		main (int argc, char **argv)
 		ft_putstr("Test de ft_strcpy\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		ft_strcpy(dest1, src1);
 		ft_putstr(dest1);
 		ft_putchar('\n');
-		ft_strcpy(dest2, src2);
+		strcpy(dest2, src2);
 		ft_putstr(dest2);
 		ft_putstr("\n\n");
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
@@ -311,7 +290,7 @@ int		main (int argc, char **argv)
 	if ((ft_strcmp(argv[1], "ft_strncpy") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
 	{
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
+		char src2[100] = "Hello World";
 		char dest1[100];
 		char dest2[100];
 
@@ -319,12 +298,10 @@ int		main (int argc, char **argv)
 		ft_putstr("Test de ft_strncpy\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		ft_strncpy(dest1, src1, 5);
 		ft_putstr(dest1);
 		ft_putchar('\n');
-		ft_strncpy(dest2, src2, 3);
+		strncpy(dest2, src2, 5);
 		ft_putstr(dest2);
 		ft_putstr("\n\n");
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
@@ -334,24 +311,20 @@ int		main (int argc, char **argv)
 	if ((ft_strcmp(argv[1], "ft_strcat") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
 	{
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
+		char src2[100] = "Hello World";
 		char dest1[100] = "Wargroove";
-		char dest2[100] = "Coucou";
+		char dest2[100] = "Wargroove";
 
 
 		ft_putstr("Test de ft_strcat\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		ft_putstr(dest1);
-		ft_putchar('\n');
-		ft_putstr(dest2);
 		ft_putchar('\n');
 		ft_strcat(dest1, src1);
 		ft_putstr(dest1);
 		ft_putchar('\n');
-		ft_strcat(dest2, src2);
+		strcat(dest2, src2);
 		ft_putstr(dest2);
 		ft_putstr("\n\n");
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
@@ -361,24 +334,20 @@ int		main (int argc, char **argv)
 	if ((ft_strcmp(argv[1], "ft_strncat") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
 	{
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
+		char src2[100] = "Hello World";
 		char dest1[100] = "Wargroove";
-		char dest2[100] = "Coucou";
+		char dest2[100] = "Wargroove";
 
 
 		ft_putstr("Test de ft_strncat\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
-		ft_putstr(src2);
-		ft_putchar('\n');
 		ft_putstr(dest1);
-		ft_putchar('\n');
-		ft_putstr(dest2);
 		ft_putchar('\n');
 		ft_strncat(dest1, src1, 5);
 		ft_putstr(dest1);
 		ft_putchar('\n');
-		ft_strncat(dest2, src2, 3);
+		strncat(dest2, src2, 5);
 		ft_putstr(dest2);
 		ft_putstr("\n\n");
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
@@ -415,17 +384,55 @@ int		main (int argc, char **argv)
 	if ((ft_strcmp(argv[1], "ft_strchr") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
 	{
 		char src1[100] = "Hello World";
-		char src2[100] = "Gitgudnoob";
 		char *dest1;
 		char *dest2;
 
 		ft_putstr("Test de ft_strchr\n*****************\n");
 		ft_putstr(src1);
 		ft_putchar('\n');
+		dest1 = ft_strchr(src1, 'o');
+		dest2 = strchr(src1, 'o');
+		ft_putstr(dest1);
+		ft_putchar('\n');
+		ft_putstr(dest2);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strrchr") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char src1[100] = "Hello World";
+		char *dest1;
+		char *dest2;
+
+		ft_putstr("Test de ft_strrchr\n*****************\n");
+		ft_putstr(src1);
+		ft_putchar('\n');
+		dest1 = ft_strrchr(src1, 'o');
+		ft_putstr(dest1);
+		ft_putchar('\n');
+		dest2 = strrchr(src1, 'o');
+		ft_putstr(dest2);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strstr") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char src1[100] = "Wargrooveincomingsoon";
+		char src2[100] = "incoming";
+		char *dest1;
+		char *dest2;
+
+		ft_putstr("Test de ft_strstr\n*****************\n");
+		ft_putstr(src1);
+		ft_putchar('\n');
 		ft_putstr(src2);
 		ft_putchar('\n');
-		dest1 = ft_strchr(src1, 'o');
-		dest2 = ft_strchr(src2, 'd');
+		dest1 = ft_strstr(src1, src2);
+		dest2 = strstr(src1, src2);
 		ft_putstr(dest1);
 		ft_putchar('\n');
 		ft_putstr(dest2);

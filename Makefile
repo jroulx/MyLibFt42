@@ -17,6 +17,7 @@ SRC = ft_strcmp.c ft_bzero.c ft_putchar.c   \
 	ft_strlen.c ft_memcmp.c ft_strdup.c     \
 	ft_strcpy.c ft_strncpy.c ft_strcat.c    \
 	ft_strncat.c ft_strlcat.c ft_strchr.c   \
+	ft_strrchr.c ft_strstr.c ft_strnstr.c   \
 
 
 OBJ = ft_strcmp.o ft_bzero.o ft_putchar.o   \
@@ -25,6 +26,7 @@ OBJ = ft_strcmp.o ft_bzero.o ft_putchar.o   \
 	ft_strlen.o ft_memcmp.o ft_strdup.o     \
 	ft_strcpy.o ft_strncpy.o ft_strcat.o    \
 	ft_strncat.o ft_strlcat.o ft_strchr.o   \
+	ft_strrchr.o ft_strstr.o ft_strnstr.o   \
 	
 
 all : TestNoFlag

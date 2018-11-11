@@ -13,14 +13,16 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 	size_t k;
 
 	k = 0;
-	while (src[k] && (k < n))
+	while (k < n)
 	{
-		dest[k] = src[k];
-		k++;
-	}
-	while (!(src[k]) && k < n)
-	{
-		dest[k] = '\0';
+		if (src[k])
+			dest[k] = src[k];
+		else
+			while (k < n)
+			{
+				dest[k] = '\0';
+				k++;
+			}
 		k++;
 	}
 	return (dest);
