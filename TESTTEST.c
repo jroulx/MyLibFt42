@@ -16,7 +16,23 @@
 /* C/C add :
 / ||(ft_strcmp(argv[1], "fulltest") == 0)
 / if (!(ft_strcmp(argv[1], "fulltest") == 0))
+/ test memdel ? test strdel ?
 */
+static void		ft_toupperr(char *c)
+		{
+			if (*c >= 'a' && *c <= 'z')
+				*c -= 32;
+		} /* for some test like ft_striter*/
+
+static void		ft_toupperri(unsigned int index, char *c)
+		{
+			if (index < ft_strlen(c - index))
+			{
+				if (*c >= 'a' && *c <= 'z')
+					*c -= 32;
+			}
+		} /* for some test like ft_striteri*/
+
 int		main (int argc, char **argv)
 {
 	if (argc != 2)
@@ -671,6 +687,74 @@ int		main (int argc, char **argv)
 		ft_putchar('\n');
 		ft_putstr("2 --> ");
 		ft_putchar(ft_tolower(test2));
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_memalloc") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char* test1;
+
+		test1 = ft_memalloc(8);
+		ft_putstr("Test de ft_memalloc\n*****************\n");
+		if (test1[5] == '\0')
+			ft_putstr("Test --> OK\n\n");
+		else ft_putstr("Test --> KO\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strnew") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char* test;
+
+		test = ft_strnew(7);
+		ft_putstr("Test de ft_strnew\n*****************\n");
+		if (test[5] == '\0')
+			ft_putstr("Test --> OK\n\n");
+		else ft_putstr("Test --> KO\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strclr") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char 	test[20] = "HelloWorld";
+
+		ft_strclr(test);
+		ft_putstr("Test de ft_strclr\n*****************\n");
+		if (test[5] == '\0')
+			ft_putstr("Test --> OK\n\n");
+		else ft_putstr("Test --> KO\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+
+	if ((ft_strcmp(argv[1], "ft_striter") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char 	test[20] = "HelloWorld";
+		
+		ft_putstr("Test de ft_striter\n*****************\n");
+		ft_putstr(test);
+		ft_putstr(" --> ");
+		ft_striter(test, ft_toupperr);
+		ft_putstr(test);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_striteri") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char 	test[20] = "HelloWorld";
+		
+		ft_putstr("Test de ft_striteri\n*****************\n");
+		ft_putstr(test);
+		ft_putstr(" --> ");
+		ft_striteri(test, ft_toupperri);
+		ft_putstr(test);
 		ft_putstr("\n\n");
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
 			return (0);

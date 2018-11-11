@@ -22,7 +22,9 @@ SRC = ft_strcmp.c ft_bzero.c ft_putchar.c    \
 	ft_putchar_fd.c ft_putnbr.c ft_isalpha.c \
 	ft_isdigit.c ft_isalnum.c ft_isascii.c   \
 	ft_isprint.c ft_toupper.c ft_tolower.c   \
-
+	ft_memalloc.c ft_memdel.c ft_strnew.c    \
+	ft_strdel.c ft_strclr.c ft_striter.c     \
+	ft_striteri.c
 
 
 OBJ = ft_strcmp.o ft_bzero.o ft_putchar.o    \
@@ -36,12 +38,16 @@ OBJ = ft_strcmp.o ft_bzero.o ft_putchar.o    \
 	ft_putchar_fd.o ft_putnbr.o ft_isalpha.o \
 	ft_isdigit.o ft_isalnum.o ft_isascii.o   \
 	ft_isprint.o ft_toupper.o ft_tolower.o   \
+	ft_memalloc.o ft_memdel.o ft_strnew.o    \
+	ft_strdel.o ft_strclr.o ft_striter.o     \
+	ft_striteri.o
+
 
 all : TestNoFlag
 
 TestNoFlag : 
 	$(CC) -c $(CHECK) $(SRC) 
-	$(CC) -o $(EXENAME) $(CHECKO) $(OBJ) 
+	$(CC) $(FLAGS) -o $(EXENAME) $(CHECKO) $(OBJ) 
 
 clean :
 	rm -rf $(CHECKO) $(OBJ) 
