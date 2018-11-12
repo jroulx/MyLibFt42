@@ -866,5 +866,36 @@ int		main (int argc, char **argv)
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
 			return (0);
 	}
+
+	if ((ft_strcmp(argv[1], "ft_strjoin") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char src1[100] = "Hello World";
+		char src2[100] = "Wargroove";
+		char *dest;;
+
+		ft_putstr("Test de ft_strjoin\n*****************\n");
+		dest = ft_strjoin(src1, src2);
+		ft_putstr(dest);
+		ft_putstr("\nExpected --> Hello WorldWargroove");
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strtrim") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char src[100] = "  H elloWor ld ";
+		char *dest;
+
+		ft_putstr("Test de ft_strtrim\n*****************\n");
+		ft_putstr(src);
+		ft_putchar('\n');
+		dest = ft_strtrim(src);
+		ft_putstr(dest);
+		ft_putstr("\nExpected -->H elloWor ld");
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
 	return (0);
 }
