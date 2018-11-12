@@ -33,6 +33,19 @@ static void		ft_toupperri(unsigned int index, char *c)
 			}
 		} /* for some test like ft_striteri*/
 
+static char		ft_strmap_test(char c)
+		{
+			if (c >= 'a' && c <= 'z')
+				return (c - 32);
+		} /* for some test like ft_strmap*/
+
+static char		ft_strmapi_test(unsigned int k, char c)
+		{
+			(void)k;
+			if (c >= 'a' && c <= 'z')
+				return (c - 32);
+		} /* for some test like ft_strmapi*/			
+
 int		main (int argc, char **argv)
 {
 	if (argc != 2)
@@ -755,6 +768,100 @@ int		main (int argc, char **argv)
 		ft_putstr(" --> ");
 		ft_striteri(test, ft_toupperri);
 		ft_putstr(test);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strmap") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char 	test[20] = "HelloWorld";
+		char 	*test2;
+		
+		ft_putstr("Test de ft_strmap\n*****************\n");
+		ft_putstr(test);
+		ft_putstr(" --> ");
+		test2 = ft_strmap(test, ft_strmap_test);
+		ft_putstr(test2);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strmapi") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char 	test[20] = "HelloWorld";
+		char 	*test2;
+		
+		ft_putstr("Test de ft_strmapi\n*****************\n");
+		ft_putstr(test);
+		ft_putstr(" --> ");
+		test2 = ft_strmapi(test, ft_strmapi_test);
+		ft_putstr(test2);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strequ") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char *test1;
+		char *test2;
+		char *test3;
+
+		ft_putstr("Test de ft_strequ\n*****************\n");
+		test1 = "hello world!";
+		test2 = "wargroove";
+		test3 = "hello world!";
+		if (ft_strequ(test1, test2) == 0)
+			ft_putstr("TEST1 -> OK\n");
+		else ft_putstr("TEST1 -> KO\n");
+		if (ft_strequ(test2, test1) == 0)
+			ft_putstr("TEST2 -> OK\n");
+		else ft_putstr("TEST2 -> KO\n");
+		if (ft_strequ(test1, test3) == 1)
+			ft_putstr("TEST3 -> OK\n");
+		else ft_putstr("TEST3 -> KO\n");
+		ft_putstr("Congrats !\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strnequ") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char *test1;
+		char *test2;
+		char *test3;
+
+		ft_putstr("Test de ft_strnequ\n*****************\n");
+		test1 = "hello world!";
+		test2 = "wargroove";
+		test3 = "hello warld!";
+		if (ft_strnequ(test1, test2, ft_strlen(test1)) == 0)
+			ft_putstr("TEST1 -> OK\n");
+		else ft_putstr("TEST1 -> KO\n");
+		if (ft_strnequ(test2, test1, 3) == 0)
+			ft_putstr("TEST2 -> OK\n");
+		else ft_putstr("TEST2 -> KO\n");
+		if (ft_strnequ(test1, test3, 5) == 1)
+			ft_putstr("TEST3 -> OK\n");
+		else ft_putstr("TEST3 -> KO\n");
+		ft_putstr("Congrats !\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_strsub") == 0)||(ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char 	test[30] = "wargrooveincoming";
+		char 	*test2;
+		
+		ft_putstr("Test de ft_strsub\n*****************\n");
+		ft_putstr(test);
+		ft_putstr(" --> ");
+		test2 = ft_strsub(test, 3, 8);
+		ft_putstr(test2);
+		ft_putstr("\nExpected : groovein");
 		ft_putstr("\n\n");
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
 			return (0);
