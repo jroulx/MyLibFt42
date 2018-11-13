@@ -916,7 +916,29 @@ int		main (int argc, char **argv)
 			ft_putchar('\n');
 			y++;
 		}
-		ft_putchar('\n');
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_itoa") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char *dest;
+
+		ft_putstr("Test de ft_itoa\n*****************\n");
+		dest = ft_itoa(-187);
+		ft_putstr(dest);
+		ft_putstr("\n\n");
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
+	if ((ft_strcmp(argv[1], "ft_putendl") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		ft_putstr("Test de ft_putendl\n*****************\n");
+		ft_putendl("hey bonjour");
+		ft_putchar('b');
+		ft_putstr("\n\n");
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
 			return (0);
 	}
