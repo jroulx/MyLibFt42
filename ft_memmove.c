@@ -9,10 +9,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t howmany)
 {
-	void *temp;
-	int k;
+	void		*temp;
 
-	k = 0;
 	if (!(temp = (void *)malloc(sizeof(void *) * howmany)))
 		return (NULL);
 	ft_memcpy(temp, src, howmany);

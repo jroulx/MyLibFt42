@@ -7,8 +7,8 @@
 / NULL.*/
 char	*ft_strnew(size_t size)
 {
-	char	*newstr;
-	int 	k;
+	char		*newstr;
+	size_t		k;
 
 	if(!(newstr = (char *)malloc((sizeof (char)) * size + 1)))
 		return (NULL);

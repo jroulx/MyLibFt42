@@ -2,7 +2,7 @@
 
 int		ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int k;
+	size_t		k;
 
 	k = 0;
 	while (str1[k] && str2[k] && (k < n))

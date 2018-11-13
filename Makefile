@@ -57,13 +57,21 @@ CompilatorErr :
 	$(CC) -c $(FLAGS) $(SRC)
 
 TestNoFlag : 
-	$(CC) -c $(CHECK) $(SRC) 
+	$(CC) -c $(FLAGS) $(SRC) 
+	$(CC) -c $(CHECK)
 	$(CC) -o $(EXENAME) $(CHECKO) $(OBJ) 
+
+Lib : 
+	$(CC) -c $(FLAGS) $(SRC) 
+	ar rc $(NAME) $(OBJ)
 
 clean :
 	rm -rf $(CHECKO) $(OBJ) 
 
 fclean : clean
 	rm -rf $(EXENAME)
+
+clearlib : 
+	rm -rf $(NAME)
 
 re : fclean all

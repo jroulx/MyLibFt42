@@ -19,7 +19,7 @@ void	*ft_memccpy(void *dest, const void *src, int seek, size_t howmany)
 {
 	unsigned char*		temp_dest;
 	unsigned char*		temp_src;
-	int k;
+	size_t				k;
 
 	k = 0;
 	temp_dest = (unsigned char *)dest;

@@ -16,7 +16,7 @@
 /la zone mémoire pointée par 'str' avec l'octet 'charac'. */ 
 void	*ft_memset(void *str, int charac, size_t howmany)
 {
-	int					k;
+	size_t				k;
 	unsigned char		*str2;
 
 	str2 = (unsigned char *)str;
