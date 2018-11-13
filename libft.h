@@ -20,6 +20,7 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s);
+char		**ft_strsplit(char const *s, char c);
 int			ft_strcmp(const char *str1, const char *str2);
 int			ft_strncmp(const char *str1, const char *str2, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);

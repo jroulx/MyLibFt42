@@ -897,5 +897,29 @@ int		main (int argc, char **argv)
 		if (!(ft_strcmp(argv[1], "fulltest") == 0))
 			return (0);
 	}
+
+	if ((ft_strcmp(argv[1], "ft_strsplit") == 0) || (ft_strcmp(argv[1], "fulltest") == 0))
+	{
+		char src[100] = "Bonjour**";
+		char **dest;
+		int k;
+		int y;
+
+		ft_putstr("Test de ft_strsplit\n*****************\n");
+		ft_putstr(src);
+		ft_putchar('\n');
+		dest = ft_strsplit(src, '*');
+		y = 0;
+		while (dest[y] != 0)
+		{
+			ft_putstr(dest[y]);
+			ft_putchar('\n');
+			y++;
+		}
+		ft_putchar('\n');
+		if (!(ft_strcmp(argv[1], "fulltest") == 0))
+			return (0);
+	}
+
 	return (0);
 }
