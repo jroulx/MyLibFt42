@@ -20,21 +20,22 @@ char	*ft_strnstr(const char *meule_de_foin, const char *aiguille, size_t len)
 	char		*location;
 
 	k = -1;
-	y = 0;
+	y = -1;
 	found = 0;
 	while (meule_de_foin[++k] && found == 0 && (k < len))
 	{
 		if (meule_de_foin[k] == aiguille[y])
 		{
-			while ((meule_de_foin[k + y] == aiguille[y]) && (aiguille[y]))
-				y++;
+			while ((aiguille[++y]) && (meule_de_foin[k + y] == aiguille[y]))
+				if (k + y > len)
+					return (NULL);
 			if (aiguille[y] == '\0')
 			{
 				location = (char*)meule_de_foin + k;
 				found = 1;
 			}
 		}
-		y = 0;
+		y = -1;
 	}
 	if (found == 1)
 		return (location);

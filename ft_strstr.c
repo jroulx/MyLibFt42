@@ -20,10 +20,12 @@ char	*ft_strstr(const char *meule_de_foin, const char *aiguille)
 	char	*location;
 
 	k = -1;
-	y = 0;
 	found = 0;
+	if (!ft_strlen(aiguille))
+		return ((char *)meule_de_foin);
 	while (meule_de_foin[++k] && found == 0)
 	{
+		y = 0;
 		if (meule_de_foin[k] == aiguille[y])
 		{
 			while ((meule_de_foin[k + y] == aiguille[y]) && (aiguille[y]))
@@ -34,7 +36,6 @@ char	*ft_strstr(const char *meule_de_foin, const char *aiguille)
 				found = 1;
 			}
 		}
-		y = 0;
 	}
 	if (found == 1)
 		return (location);

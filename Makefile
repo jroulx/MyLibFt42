@@ -61,6 +61,10 @@ TestNoFlag :
 	$(CC) -c $(CHECK)
 	$(CC) -o $(EXENAME) $(CHECKO) $(OBJ) 
 
+so : 
+	$(CC) -Wall -fPIC -c $(SRC)
+	$(CC) -shared -o libft.so $(OBJ)
+
 Lib : 
 	$(CC) -c $(FLAGS) $(SRC) 
 	ar rc $(NAME) $(OBJ)

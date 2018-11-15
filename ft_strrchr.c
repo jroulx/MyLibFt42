@@ -14,18 +14,15 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int k;
-	int find;
+	size_t		k;
 
-	k = 0;
-	find = -1;
-	while (s[k])
+	k = ft_strlen(s) + 1; 
+	while (k-- > 0)
 	{
 		if (s[k] == (char)c)
-			find = k;
-		k++;
+		{
+			return ((char *)s + k);
+		}
 	}
-	if (find != -1)
-		return ((char *)s + find);
 	return (NULL);
 }
