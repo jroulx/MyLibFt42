@@ -1,7 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 10:45:51 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 10:46:22 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/* La fonction strrchr() renvoie un pointeur
-/sur la dernière occurrence du caractère c dans la chaîne s. */
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -1,15 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 12:04:21 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 12:48:54 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-/*Alloue (avec malloc(3)) et retourne une copie de la chaine
-/ passée en paramètre sans les espaces blancs au debut et à la
-/ fin de cette chaine. On considère comme espaces blancs les
-/ caractères ’ ’, ’\n’ et ’\t’. Si s ne contient pas d’espaces
-/ blancs au début ou à la fin, la fonction renvoie une copie de
-/ s. Si l’allocation echoue, la fonction renvoie NULL.*/
-static int 		spc_strt(char const *str)
+static size_t		s_strt(char const *str)
 {
-	int		k;
+	size_t		k;
 
 	k = 0;
 	while (str[k] == ' ' || str[k] == '\n' || str[k] == '\t')
@@ -17,9 +22,9 @@ static int 		spc_strt(char const *str)
 	return (k);
 }
 
-static int 		spc_end(char const *str, int strsize)
+static size_t		s_end(char const *str, size_t strsize)
 {
-	int		k;
+	size_t		k;
 
 	k = strsize;
 	while (str[k - 1] == ' ' || str[k] == '\n' || str[k] == '\t')
@@ -33,25 +38,23 @@ static int 		spc_end(char const *str, int strsize)
 
 char			*ft_strtrim(char const *s)
 {
-	char	*new_str;
-	int		size_s;
-	int		tot_spc;
-	int		k;
-	int 	y;
-	int		x;
+	char		*new_str;
+	size_t		tot_spc;
+	size_t		k;
+	size_t		y;
+	size_t		x;
 
 	if (!s)
 		return (NULL);
-	size_s = ft_strlen(s);
-	if ((spc_end(s, size_s) == size_s) || (spc_strt(s) == size_s))
+	if ((s_end(s, ft_strlen(s)) == ft_strlen(s) || (s_strt(s) == ft_strlen(s))))
 		return (NULL);
-	tot_spc = size_s - spc_end(s, size_s) - spc_strt(s);
-	if (!(new_str = (char *)malloc(sizeof (char) * tot_spc + 1)))
+	tot_spc = ft_strlen(s) - s_end(s, ft_strlen(s)) - s_strt(s);
+	if (!(new_str = (char *)malloc(sizeof(char) * tot_spc + 1)))
 		return (NULL);
-	k = spc_strt(s);
-	y = spc_end(s, size_s);;
+	k = s_strt(s);
+	y = s_end(s, ft_strlen(s));
 	x = 0;
-	while (k < size_s - y)
+	while (k < ft_strlen(s) - y)
 	{
 		new_str[x] = s[k];
 		k++;

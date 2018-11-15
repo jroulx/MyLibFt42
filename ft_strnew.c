@@ -1,16 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 10:41:46 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 12:44:02 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-/*Alloue (avec malloc(3)) et retourne une chaine de caractère
-/ “fraiche” terminée par un ’\0’. Chaque caractère de la chaine
-/ est initialisé à ’\0’. Si l’allocation echoue, la fonction renvoie
-/ NULL.*/
 char	*ft_strnew(size_t size)
 {
 	char		*newstr;
 	size_t		k;
 
-	if(!(newstr = (char *)malloc((sizeof (char)) * size + 1)))
+	k = 0;
+	if (!(newstr = (char *)malloc((sizeof(char)) * size + 1)))
 		return (NULL);
 	while (k < size)
 	{

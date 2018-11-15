@@ -1,7 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 09:56:30 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 09:57:10 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-/* La fonction strchr() renvoie un pointeur sur la
-/ première occurrence du caractère c dans la chaîne s. */
 char	*ft_strchr(const char *s, int c)
 {
 	int k;

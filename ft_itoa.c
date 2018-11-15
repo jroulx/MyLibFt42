@@ -1,11 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 09:33:16 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 09:36:37 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-/*Alloue (avec malloc(3)) et retourne une chaine de caractères
-/ “fraiche” terminée par un ’\0’ représentant l’entier n passé
-/ en paramètre. Les nombres négatifs doivent être gérés. Si l’allocation
-/ échoue, la fonction renvoie NULL.*/
-
-static int 		sizenbr(int nbr)
+static int		sizenbr(int nbr)
 {
 	int		nbr_size;
 	int		k;
@@ -23,7 +30,7 @@ static int 		sizenbr(int nbr)
 static int		power10(int n)
 {
 	int		k;
-	int 	pwr;
+	int		pwr;
 
 	k = 0;
 	pwr = 1;
@@ -49,16 +56,15 @@ char			*ft_itoa(int n)
 		sign = 1;
 	}
 	size = sizenbr(n);
-	if(!(strnbr = ft_strnew(size + sign)))
+	if (!(strnbr = ft_strnew(size + sign)))
 		return (NULL);
 	if (sign == 1)
 		strnbr[0] = '-';
-	k = 0;
-	while (k < size - 1)
+	k = -1;
+	while (++k < size - 1)
 	{
 		strnbr[k + sign] = (n / power10(size - 1 - k)) + '0';
 		n = n % power10(size - 1 - k);
-		k++;
 	}
 	strnbr[k + sign] = (n + '0');
 	strnbr[k + 1 + sign] = '\0';

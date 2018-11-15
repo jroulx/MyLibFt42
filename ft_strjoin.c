@@ -1,8 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 10:12:44 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 10:14:31 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*Alloue (avec malloc(3)) et retourne une chaine de caractères
-/ “fraiche” terminée par un ’\0’ résultant de la concaténation
-/ de s1 et s2. Si l’allocation echoue, la fonction renvoie NULL. */
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -15,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	str_len = ft_strlen(s1) + ft_strlen(s2);
 	k = 0;
-	if (!(join = (char *)malloc(sizeof (char) * str_len + 1)))
+	if (!(join = (char *)malloc(sizeof(char) * str_len + 1)))
 		return (NULL);
 	while (s1[k])
 	{
@@ -26,9 +34,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	k = 0;
 	while (s2[k])
 	{
-		join[y] = s2[k];
-		k++;
+		join[y] = s2[k++];
 		y++;
 	}
+	join[y] = s2[k];
 	return (join);
 }

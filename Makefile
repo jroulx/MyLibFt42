@@ -51,7 +51,7 @@ OBJ = ft_strcmp.o ft_bzero.o ft_putchar.o    \
 	ft_putstr_fd.o
 
 
-all : TestNoFlag
+all : Lib
 
 CompilatorErr :
 	$(CC) -c $(FLAGS) $(SRC)
@@ -64,6 +64,7 @@ TestNoFlag :
 Lib : 
 	$(CC) -c $(FLAGS) $(SRC) 
 	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean :
 	rm -rf $(CHECKO) $(OBJ) 

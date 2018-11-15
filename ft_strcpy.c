@@ -1,10 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 10:01:17 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 10:01:44 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*La fonction strcpy() copie la chaîne pointée par src
-/ (y compris l'octet nul « \0 » final) dans la chaîne
-/ pointée par dest. Les deux chaînes ne doivent pas se
-/ chevaucher. La chaîne dest doit être assez grande
-/ pour accueillir la copie.*/
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

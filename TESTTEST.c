@@ -37,6 +37,7 @@ static char		ft_strmap_test(char c)
 		{
 			if (c >= 'a' && c <= 'z')
 				return (c - 32);
+			return (c);
 		} /* for some test like ft_strmap*/
 
 static char		ft_strmapi_test(unsigned int k, char c)
@@ -44,6 +45,7 @@ static char		ft_strmapi_test(unsigned int k, char c)
 			(void)k;
 			if (c >= 'a' && c <= 'z')
 				return (c - 32);
+			return (c);
 		} /* for some test like ft_strmapi*/			
 
 int		main (int argc, char **argv)

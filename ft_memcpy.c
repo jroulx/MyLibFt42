@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 09:46:43 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 09:47:25 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t howmany)
@@ -8,7 +20,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t howmany)
 
 	dest_temp = (unsigned char *)dest;
 	src_temp = (unsigned char *)src;
-
 	k = 0;
 	while (k < howmany)
 	{

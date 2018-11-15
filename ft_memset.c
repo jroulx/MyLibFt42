@@ -6,14 +6,12 @@
 /*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:36:51 by jroulx            #+#    #+#             */
-/*   Updated: 2018/11/09 14:44:15 by jroulx           ###   ########.fr       */
+/*   Updated: 2018/11/15 09:50:46 by jroulx           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*La fonction memset() remplit les 'howmany' premiers octets de 
-/la zone mémoire pointée par 'str' avec l'octet 'charac'. */ 
 void	*ft_memset(void *str, int charac, size_t howmany)
 {
 	size_t				k;

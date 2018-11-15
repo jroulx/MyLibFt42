@@ -1,9 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 09:55:42 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 09:56:22 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*La fonction strcat() ajoute la chaîne src à la fin
-/ de la chaîne dest en écrasant le caractère nul (« \0 »)
-/ à la fin de dest, puis en ajoutant un nouveau caractère
-/ nul final.*/
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

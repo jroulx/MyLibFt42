@@ -1,10 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 10:09:15 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 10:09:51 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-
-/* Applique la fonction f à chaque caractère de la chaine de
-/ caractères passée en paramètre. Chaque caractère est passé
-/ par adresse à la fonction f afin de pouvoir être modifié si
-/ nécessaire. */
 
 void	ft_striter(char *s, void (*f)(char *))
 {

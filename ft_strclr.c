@@ -1,8 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 09:57:23 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 09:59:00 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-
-/*Assigne la valeur ’\0’ à tous les caractères de la chaine passée
-/ en paramètre. */
 
 void	ft_strclr(char *s)
 {
@@ -10,7 +18,7 @@ void	ft_strclr(char *s)
 
 	k = 0;
 	if (s)
-	{	
+	{
 		while (s[k])
 			s[k++] = '\0';
 	}

@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 10:47:46 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 11:59:18 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static char*		cpy_str(char const *src, char c)
+static char			*cpy_str(char const *src, char c)
 {
-	int 	k;
+	int		k;
 	char	*str;
 
 	k = 0;
 	while (src[k] != c && src[k])
 		k++;
-	if(!(str = ft_strnew(k)))
-		return(NULL);
+	if (!(str = ft_strnew(k)))
+		return (NULL);
 	k = 0;
 	while (src[k] != c && src[k])
 	{
@@ -20,7 +32,7 @@ static char*		cpy_str(char const *src, char c)
 	return (str);
 }
 
-static int		nbr_words(char const *src, char sep)
+static int			nbr_words(char const *src, char sep)
 {
 	int		k;
 	int		nbr;
@@ -43,21 +55,21 @@ static int		nbr_words(char const *src, char sep)
 
 char				**ft_strsplit(char const *s, char c)
 {
-	int 	k;
+	int		k;
 	int		y;
 	char	**tab;
 
 	k = 0;
 	if (!s)
 		return (NULL);
-	if (!(tab = (char **)malloc(sizeof (char *) * nbr_words(s, c) + 1)))
-		return(NULL);
+	if (!(tab = (char **)malloc(sizeof(char *) * nbr_words(s, c) + 1)))
+		return (NULL);
 	y = 0;
 	while (y < nbr_words(s, c))
 	{
 		while (s[k] == c)
 			k++;
-		if(!(tab[y] = cpy_str(s + k, c)))
+		if (!(tab[y] = cpy_str(s + k, c)))
 			return (NULL);
 		while (s[k] != c && s[k])
 			k++;

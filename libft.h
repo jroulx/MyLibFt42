@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/15 12:40:27 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/15 12:42:20 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
 
@@ -13,7 +25,8 @@ char		*ft_strncat(char *dest, const char *src, size_t n);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strstr(const char *meule_de_foin, const char *aiguille);
-char		*ft_strnstr(const char *meule_de_foin, const char *aiguille, size_t len);
+char		*ft_strnstr(const char *meule_de_foin, const char *aiguille,
+		size_t len);
 char		*ft_strnew(size_t size);
 char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -45,9 +58,9 @@ void		ft_putstr_fd(char const *s, int fd);
 void		ft_memdel(void **ap);
 void		ft_strdel(char **as);
 void		ft_strclr(char *s);
-void 		ft_striter(char *s, void (*f)(char *));
+void		ft_striter(char *s, void (*f)(char *));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
-void 		ft_putendl(char const *s);
+void		ft_putendl(char const *s);
 void		ft_putendl_fd(char const *s, int fd);
 void		*ft_memccpy(void *dest, const void *src, int seek, size_t howmany);
 void		*ft_memchr(const void *src, int seek, size_t howmany);

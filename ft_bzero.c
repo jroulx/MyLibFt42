@@ -6,14 +6,12 @@
 /*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:19:12 by jroulx            #+#    #+#             */
-/*   Updated: 2018/11/09 14:37:42 by jroulx           ###   ########.fr       */
+/*   Updated: 2018/11/15 09:15:11 by jroulx           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*La fonction ft_bzero(void) met à 0 (octets contenant « \0 »)
-/ les "nbr" premiers octets du bloc pointé par "source". */  
 void	ft_bzero(void *source, size_t nbr)
 {
 	unsigned char	*temp_source;
