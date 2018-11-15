@@ -6,13 +6,13 @@
 /*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 12:04:21 by jroulx            #+#    #+#             */
-/*   Updated: 2018/11/15 12:48:54 by jroulx           ###   ########.fr       */
+/*   Updated: 2018/11/15 13:11:38 by jroulx           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		s_strt(char const *str)
+static size_t			s_strt(char const *str)
 {
 	size_t		k;
 
@@ -22,7 +22,7 @@ static size_t		s_strt(char const *str)
 	return (k);
 }
 
-static size_t		s_end(char const *str, size_t strsize)
+static size_t			s_end(char const *str, size_t strsize)
 {
 	size_t		k;
 
@@ -36,7 +36,7 @@ static size_t		s_end(char const *str, size_t strsize)
 	return (strsize - k);
 }
 
-char			*ft_strtrim(char const *s)
+char					*ft_strtrim(char const *s)
 {
 	char		*new_str;
 	size_t		tot_spc;

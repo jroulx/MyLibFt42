@@ -76,3 +76,5 @@ clearlib :
 	rm -rf $(NAME)
 
 re : fclean all
+
+.PHONY : all CompilatorErr TestNoFlag Lib clean fclean clearlib re
