@@ -12,32 +12,30 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *meule_de_foin, const char *aiguille, size_t len)
+char	*ft_strnstr(const char *source, const char *search, size_t len)
 {
+	size_t		i;
+	size_t		j;
 	size_t		k;
-	size_t		y;
-	size_t		found;
-	char		*location;
+	int			found;
 
-	k = -1;
-	y = -1;
-	found = 0;
-	while (meule_de_foin[++k] && found == 0 && (k < len))
+	i = -1;
+	found = 1;
+	if (!ft_strlen(search))
+		return ((char *)source);
+	while (source[++i] && i < len)
 	{
-		if (meule_de_foin[k] == aiguille[y])
+		j = 0;
+		if (source[i] == search[0])
 		{
-			while ((aiguille[++y]) && (meule_de_foin[k + y] == aiguille[y]))
-				if (k + y > len)
-					return (NULL);
-			if (aiguille[y] == '\0')
-			{
-				location = (char*)meule_de_foin + k;
-				found = 1;
-			}
+			k = i;
+			found = 1;
+			while (source[k] && search[j] && j < len && k < len)
+				if (source[k++] != search[j++])
+					found = 0;
+			if (found && !(search[j]))
+				return ((char *)source + i);
 		}
-		y = -1;
 	}
-	if (found == 1)
-		return (location);
 	return (NULL);
 }

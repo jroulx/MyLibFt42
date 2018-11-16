@@ -15,15 +15,18 @@
 char	*ft_strnew(size_t size)
 {
 	char		*newstr;
+	char		*reset;
 	size_t		k;
 
 	k = 0;
 	if (!(newstr = (char *)malloc((sizeof(char)) * size + 1)))
 		return (NULL);
-	while (k < size)
+	reset = newstr;
+	while (k <= size)
 	{
-		newstr[k] = 0;
+		newstr[k] = '\0';
 		k++;
 	}
-	return (newstr);
+	return (reset);
 }
+

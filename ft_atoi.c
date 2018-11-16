@@ -15,7 +15,7 @@
 int		ft_atoi(const char *nptr)
 {
 	int k;
-	int entier;
+	long double entier;
 	int sign;
 
 	k = 0;
@@ -33,6 +33,8 @@ int		ft_atoi(const char *nptr)
 	{
 		entier = (entier * 10) + (nptr[k] - '0');
 		k++;
+		if ((entier * sign > 2147483647) || entier * sign < -2147483648)
+			return (0);
 	}
 	return (entier * sign);
 }
