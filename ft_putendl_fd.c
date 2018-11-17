@@ -6,7 +6,7 @@
 /*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 09:53:39 by jroulx            #+#    #+#             */
-/*   Updated: 2018/11/15 09:53:59 by jroulx           ###   ########.fr       */
+/*   Updated: 2018/11/17 12:21:39 by jroulx           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char const *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	ft_putchar('\n');
+	ft_putchar_fd('\n', fd);
 }

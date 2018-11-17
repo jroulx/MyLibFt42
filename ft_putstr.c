@@ -6,7 +6,7 @@
 /*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 09:54:26 by jroulx            #+#    #+#             */
-/*   Updated: 2018/11/15 09:54:56 by jroulx           ###   ########.fr       */
+/*   Updated: 2018/11/17 12:06:07 by jroulx           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr(char const *str)
 	int k;
 
 	k = 0;
+	if (!str)
+		return ;
 	while (str[k])
 	{
 		ft_putchar(str[k]);
