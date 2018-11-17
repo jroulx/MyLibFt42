@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static size_t	get_str_len(int n)
+static size_t	nbr_size(int n)
 {
 	size_t		i;
 
@@ -22,25 +22,25 @@ static size_t	get_str_len(int n)
 	return (i);
 }
 
-char			*ft_itoa(int n)
+char			*ft_itoa(int nbr)
 {
 	char			*str;
 	size_t			str_len;
-	unsigned int	n_cpy;
+	unsigned int	nbrcpy;
 
-	str_len = get_str_len(n);
-	n_cpy = n;
-	if (n < 0)
+	str_len = nbr_size(nbr);
+	nbrcpy = nbr;
+	if (nbr < 0)
 	{
-		n_cpy = n;
+		nbrcpy = -nbr;
 		str_len++;
 	}
 	if (!(str = ft_strnew(str_len)))
 		return (NULL);
-	str[--str_len] = n_cpy % 10 + '0';
-	while (n_cpy /= 10)
-		str[--str_len] = n_cpy % 10 + '0';
-	if (n < 0)
-		str[0] = '-';
+	str[--str_len] = nbrcpy % 10 + '0';
+	while (nbrcpy /= 10)
+		str[--str_len] = nbrcpy % 10 + '0';
+	if (nbr < 0)
+		*(str + 0) = '-';
 	return (str);
 }
