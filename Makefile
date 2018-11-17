@@ -28,7 +28,9 @@ SRC = ft_strcmp.c ft_bzero.c ft_putchar.c    \
 	ft_strequ.c ft_strnequ.c ft_strsub.c     \
 	ft_strjoin.c ft_strtrim.c ft_strsplit.c  \
 	ft_itoa.c ft_putendl.c ft_putendl_fd.c   \
-	ft_putstr_fd.c
+	ft_putstr_fd.c ft_lstnew.c ft_lstdelone.c \
+	ft_lstdel.c ft_lstadd.c ft_lstiter.c     \
+	ft_lstmap.c
 
 
 OBJ = ft_strcmp.o ft_bzero.o ft_putchar.o    \
@@ -48,7 +50,9 @@ OBJ = ft_strcmp.o ft_bzero.o ft_putchar.o    \
 	ft_strequ.o ft_strnequ.o ft_strsub.o     \
 	ft_strjoin.o ft_strtrim.o ft_strsplit.o  \
 	ft_itoa.o ft_putendl.o ft_putendl_fd.o   \
-	ft_putstr_fd.o
+	ft_putstr_fd.o ft_lstnew.o ft_lstdelone.o \
+	ft_lstdel.o ft_lstadd.o ft_lstiter.o     \
+	ft_lstmap.o
 
 
 all : Lib

@@ -17,6 +17,13 @@
 # include <string.h>
 # include <unistd.h>
 
+typedef struct 		s_list
+{
+	void 	*content;
+	size_t 	content_size;
+	struct 	s_list *next;
+} 					t_list;
+
 char		*ft_strdup(const char *s);
 char		*ft_strcpy(char *dest, const char *src);
 char		*ft_strncpy(char *dest, const char *src, size_t n);
@@ -25,7 +32,7 @@ char		*ft_strncat(char *dest, const char *src, size_t n);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strstr(const char *meule_de_foin, const char *aiguille);
-char		*ft_strnstr(const char *big, const char *little,
+char		*ft_strnstr(const char *meule_de_foin, const char *aiguille,
 		size_t len);
 char		*ft_strnew(size_t size);
 char		*ft_strmap(char const *s, char (*f)(char));
@@ -70,5 +77,12 @@ void		*ft_memset(void *str, int charac, size_t howmany);
 void		*ft_memalloc(size_t size);
 size_t		ft_strlen(const char *str);
 size_t		ft_strlcat(char *dest, const char *src, size_t size);
+t_list		*ft_lstnew(void const *content, size_t content_size);
+t_list		*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstadd(t_list **alst, t_list *new);void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+
 
 #endif
