@@ -1,55 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/21 13:57:58 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/21 13:58:18 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-
-/*Parcourt la liste lst en appliquant à chaque maillon la fonction
-f et crée une nouvelle liste “fraiche” avec malloc(3) résultant
-des applications successives. Si une allocation échoue,
-la fonction renvoie NULL*/
-t_list		*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
-{
-	t_list	*new;
-	t_list	*list;
-
-	list = f(lst);
-	new = list;
-	while (lst->next)
-	{
-		lst = lst->next;
-		if (!(list->next = f(lst)))
-		{
-			free(list->next);
-			return (NULL);
-		}
-		list = list->next;
-	}
-	return (new);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {

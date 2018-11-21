@@ -6,7 +6,7 @@
 /*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 09:07:22 by jroulx            #+#    #+#             */
-/*   Updated: 2018/11/15 09:09:15 by jroulx           ###   ########.fr       */
+/*   Updated: 2018/11/21 14:52:04 by jroulx           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *nptr)
 {
-	int k;
-	long double entier;
-	int sign;
+	int						k;
+	long long				entier;
+	int						sign;
 
 	k = 0;
 	sign = 1;

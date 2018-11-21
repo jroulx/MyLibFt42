@@ -1,17 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/21 13:44:08 by jroulx            #+#    #+#             */
+/*   Updated: 2018/11/21 13:56:41 by jroulx           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*Parcourt la liste lst en appliquant à chaque maillon la fonction
-f.*/
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
-{
-	t_list tmplst;
-	tmplst = lst;
-	while (tmplst)
-	{
-		f(tmplst);
-		tmplst = tmplst->next;
-	}
-}
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {

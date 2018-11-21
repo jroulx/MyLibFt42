@@ -54,8 +54,7 @@ OBJ = ft_strcmp.o ft_bzero.o ft_putchar.o    \
 	ft_lstdel.o ft_lstadd.o ft_lstiter.o     \
 	ft_lstmap.o
 
-
-all : Lib
+all : $(NAME)
 
 CompilatorErr :
 	$(CC) -c $(FLAGS) $(SRC)
@@ -69,7 +68,7 @@ so :
 	$(CC) -Wall -fPIC -c $(SRC)
 	$(CC) -shared -o libft.so $(OBJ)
 
-Lib : 
+$(NAME) : 
 	$(CC) -c $(FLAGS) $(SRC) 
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)

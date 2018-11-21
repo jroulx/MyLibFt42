@@ -6,7 +6,7 @@
 /*   By: jroulx <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 11:59:30 by jroulx            #+#    #+#             */
-/*   Updated: 2018/11/15 12:01:43 by jroulx           ###   ########.fr       */
+/*   Updated: 2018/11/21 14:38:51 by jroulx           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,5 @@ char	*ft_strstr(const char *meule_de_foin, const char *aiguille)
 			}
 		}
 	}
-	if (found == 1)
-		return (location);
-	return (NULL);
+	return ((found == 1) ? location : NULL);
 }
